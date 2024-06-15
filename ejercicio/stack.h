@@ -16,4 +16,11 @@ typedef struct Stack {
 // Inicializar la pila
 void initStack(Stack* s);
 
+// Imprimir pila
+void printStack(Stack *s);
+
+// Funcion hacer push
+void push(Stack* s, int data);
+
+
 #endif
