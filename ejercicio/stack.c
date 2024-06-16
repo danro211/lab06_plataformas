@@ -36,3 +36,31 @@ void push(Stack* s, int data) {
     }
     s->top = newNode; // Establecer el nuevo nodo como el tope de la pilar
 }
+
+// Funcion para eliminar y retornar elemento superior de la pila
+int pop(Stack* s) {
+    if (s->top == NULL) {
+        fprintf(stderr, "Error: pop de una pila vacia\n");
+        return -1; 
+    }
+
+    Node* temp = s->top; // Guardar nodo superior para no perder referencia
+    int data = temp->data; // Guardar dato del nodo superior para devolverlo
+    s->top = s->top->next; // Mover tope de la pila al siguiente nodo
+
+    if (s->top != NULL) {
+        s->top->prev = NULL; // Eliminar la referencia al nodo eliminado
+    }
+
+    free(temp); // Liberar memoria del nodo eliminado
+    return data; // Devolver el dato del nodo eliminado
+}
+
+// Funcion para retornar sin eliminar el valor del tope de pila
+int peek(Stack* s) {
+    if (s->top == NULL) {
+        fprintf(stderr, "Error: tope de una pila vacia\n");
+        return -1;
+    }
+    return s->top->data; // Devolver el dato del nodo superior
+}

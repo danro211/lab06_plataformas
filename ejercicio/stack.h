@@ -22,5 +22,11 @@ void printStack(Stack *s);
 // Funcion hacer push
 void push(Stack* s, int data);
 
+// Funcion hacer pop
+int pop(Stack* s);
+
+// Funcion hacer peek
+int peek(Stack* s);
+
 
 #endif
