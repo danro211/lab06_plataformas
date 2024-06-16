@@ -64,3 +64,14 @@ int peek(Stack* s) {
     }
     return s->top->data; // Devolver el dato del nodo superior
 }
+
+// Funcion averiguar si pila vacia
+int isEmpty(Stack* s) {
+    if (s->top == NULL) {
+        printf("La pila esta vacia: Si\n");
+        return 1; // La pila esta vacia
+    } else {
+        printf("La pila esta vacia: No\n");
+        return 0; // La pila no esta vacia
+    }
+}

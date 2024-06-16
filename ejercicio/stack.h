@@ -28,5 +28,7 @@ int pop(Stack* s);
 // Funcion hacer peek
 int peek(Stack* s);
 
+// Funcion si esta vacia
+int isEmpty(Stack* s);
 
 #endif

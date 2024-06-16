@@ -8,6 +8,8 @@ int main() {
     printStack(&myStack);  // Muestra la pila vacia
     printf("\n");
 
+    isEmpty(&myStack); // Verificar si la pila esta vacia
+    printf("\n");
     // Pruebas push
     printf("Se hace push de 10\n");
     push(&myStack, 10); // Agrega el valor 10 a la pila
@@ -29,6 +31,14 @@ int main() {
 
     // Pruebas peek
      printf("\nTope de la pila actual usando peek: %d\n", peek(&myStack));  // Muestra el tope de la pila
+
+    printf("\n");
+    isEmpty(&myStack); // Verificar el estado final de la pila
+
+    // Limpiar pila para evitar fugas de memoria
+    while (!isEmpty(&myStack)) {
+    pop(&myStack); // Llama a pop hasta que la pila esté vacía
+}
 
     return 0;
 }
